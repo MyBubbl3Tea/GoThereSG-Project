@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Hotlines>
+  <Hotline Category="Emergency">
+    <Type>Emergency Ambulance And Fire</Type>
+    <Number>995</Number>
+    <Type>Non-Emergency Ambulance</Type>
+    <Number>1777</Number>
+    <Type>Police Emergency</Type>
+    <Number>999</Number>
+    <Type>Police Hotline</Type>
+    <Number>1800 255 0000</Number>
+    <Type>Fire Hazard Hotline</Type>
+    <Number>1800 933 6483</Number>
+  </Hotline>
+
+  <Hotline Category="Taxi">
+    <Type>Dial-A-Cab</Type>
+    <Number>6342 5222</Number>
+
+    <Type>Comfort Taxi"</Type>
+    <Number>6552 1111</Number>
+
+    <Type>CityCab</Type>
+    <Number>6552 1111</Number>
+
+    <Type>SMRT Taxis</Type>
+    <Number>6555 8888</Number>
+
+    <Type>TransCab</Type>
+    <Number>6555 3333</Number>
+
+    <Type>Premier Taxis</Type>
+    <Number>6363 6888</Number>
+    <Type>Prime Taxi</Type>
+    <Number>6778 0808</Number>
+
+    <Type>Yellow-Top Taxi</Type>
+    <Number>6293 5545</Number>
+
+    <Type>Taxi Singapore</Type>
+    <Number>6600 2800</Number>
+
+  </Hotline>
+  
+</Hotlines>

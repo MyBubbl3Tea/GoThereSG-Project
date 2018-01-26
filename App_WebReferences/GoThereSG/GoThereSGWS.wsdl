@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.tpifc.com/TPWebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.tpifc.com/TPWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.tpifc.com/TPWebServices">
+      <s:element name="getMRTStations">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMRTStationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMRTStationsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getMRTStationsSoapIn">
+    <wsdl:part name="parameters" element="tns:getMRTStations" />
+  </wsdl:message>
+  <wsdl:message name="getMRTStationsSoapOut">
+    <wsdl:part name="parameters" element="tns:getMRTStationsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GoThereSGWSSoap">
+    <wsdl:operation name="getMRTStations">
+      <wsdl:input message="tns:getMRTStationsSoapIn" />
+      <wsdl:output message="tns:getMRTStationsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GoThereSGWSSoap" type="tns:GoThereSGWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMRTStations">
+      <soap:operation soapAction="http://www.tpifc.com/TPWebServices/getMRTStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GoThereSGWSSoap12" type="tns:GoThereSGWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMRTStations">
+      <soap12:operation soapAction="http://www.tpifc.com/TPWebServices/getMRTStations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GoThereSGWS">
+    <wsdl:port name="GoThereSGWSSoap" binding="tns:GoThereSGWSSoap">
+      <soap:address location="http://localhost:51606/GoThereSGWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GoThereSGWSSoap12" binding="tns:GoThereSGWSSoap12">
+      <soap12:address location="http://localhost:51606/GoThereSGWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
